@@ -2,37 +2,32 @@ import React from "react";
 import { render } from "react-dom";
 import { ThemeProvider } from "emotion-theming";
 import { defaultTheme } from "./Theme";
-import { Global, css } from "@emotion/core";
+import { BrowserRouter, Route } from "react-router-dom";
+import Index from "./components/Pages/Index";
 
 //Render
-import Header from "./Header";
+import Header from "./components/Header";
 
-//Fonts
-import MontserratRegular from "./fonts/Montserrat-Regular.ttf";
-import MontserratLight from "./fonts/Montserrat-Light.ttf";
-
-const globalStyle = css`
-  @font-face {
-    font-family: "Montserrat";
-    src: url(${MontserratRegular}) format("truetype");
-    font-weight: normal;
-    font-style: normal;
-  }
-
-  @font-face {
-    font-family: "Montserrat";
-    src: url(${MontserratLight}) format("truetype");
-    font-weight: 300;
-    font-style: normal;
-  }
-`;
+//Global
+import GlobalCss from "./GlobalCss";
+import Fonts from "./Fonts";
 
 const App = () => {
   return (
-    <ThemeProvider theme={defaultTheme}>
-      <Global styles={globalStyle} />
-      <Header />
-    </ThemeProvider>
+    <BrowserRouter>
+      <ThemeProvider theme={defaultTheme}>
+        <GlobalCss />
+        <Fonts />
+        <Header />
+        <Route exact path="/">
+          <Index />
+        </Route>
+        <Route exact path="/Menu"></Route>
+        <Route exact path="/Gallery"></Route>
+        <Route exact path="/Testiminials"></Route>
+        <Route exact path="/Contact Us"></Route>
+      </ThemeProvider>
+    </BrowserRouter>
   );
 };
 
