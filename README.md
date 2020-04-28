@@ -3,6 +3,7 @@
 Wcdonalds er en fast-food hjemmeside, frems til din egen burger.
 
 ### Forside
+ - Information om Wcdonalds.
  - Layout skal være opbygget i et grid.
  - Kontakt informationer.
  - Link til næste side.
