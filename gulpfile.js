@@ -5,7 +5,7 @@ const imagemin = require("gulp-imagemin");
 
 function Html(done) {
   gulp
-    .src("src/*.html")
+    .src("dist/*.html")
     .pipe(htmlmin({ collapseWhitespace: true }))
     .pipe(gulp.dest("dist"));
   done();
