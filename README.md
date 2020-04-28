@@ -11,4 +11,4 @@ HotBurgers er en fast-food hjemmeside, frems til din egen burger.
 - Swipe eller klik på pil for at skifte mellem salat, ost, kød f.eks. 
 - Prisen ændre sig med fødevarende. 
 
-## Netlify: https://5ea81ab8c8e16600079656af--gracious-kalam-3430d6.netlify.app/
+## Netlify: https://gracious-kalam-3430d6.netlify.app/
