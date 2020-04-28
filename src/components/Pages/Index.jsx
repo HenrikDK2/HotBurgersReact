@@ -1,14 +1,14 @@
 import React from "react";
 import FullscreenBG from "../atoms/FullscreenBG";
-import bgImage from "../../images/topBackgroundIndex.jpg";
-import LogoSvg from "../../images/Logo.svg";
 import Logo from "../molecules/Logo";
+import LogoSrc from "./../../images/logo.svg";
+import bgSrc from "./../../images/topBackgroundIndex.jpg";
 
 const Index = (props) => {
   return (
     <main>
-      <Logo src={LogoSvg} />
-      <FullscreenBG src={bgImage} />
+      <Logo src={LogoSrc} />
+      <FullscreenBG src={bgSrc} />
     </main>
   );
 };
