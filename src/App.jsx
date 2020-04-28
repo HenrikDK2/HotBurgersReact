@@ -6,7 +6,7 @@ import { BrowserRouter, Route } from "react-router-dom";
 import Index from "./components/Pages/Index";
 
 //Render
-import Header from "./components/Header";
+import Header from "./components/organisms/Header";
 
 //Global
 import GlobalCss from "./GlobalCss";

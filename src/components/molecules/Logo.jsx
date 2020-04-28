@@ -1,6 +1,6 @@
 import React from "react";
 import { css } from "emotion";
-import Img from "./Img";
+import Img from "../atoms/Img";
 
 const figureStyle = css`
   width: 14rem;

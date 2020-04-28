@@ -1,8 +1,8 @@
 import React from "react";
-import FullscreenBG from "../FullscreenBG";
+import FullscreenBG from "../atoms/FullscreenBG";
 import bgImage from "../../images/topBackgroundIndex.jpg";
 import LogoSvg from "../../images/Logo.svg";
-import Logo from "../Logo";
+import Logo from "../molecules/Logo";
 
 const Index = (props) => {
   return (

@@ -1,8 +1,8 @@
 import React from "react";
 import { css } from "emotion";
 import { useTheme } from "emotion-theming";
-import LinkItem from "./LinkItem";
-import List from "./List";
+import LinkItem from "../molecules/LinkItem";
+import List from "../atoms/List";
 
 const Header = () => {
   const theme = useTheme();
