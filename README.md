@@ -3,7 +3,7 @@
 HotBurgers er en fast-food hjemmeside, frems til din egen burger.
 
 ### Forside
- - Information om Wcdonalds.
+ - Information om HotBurgersReact.
  - Kontakt informationer.
  - Link til burger fremstilling.
 ### Burgerfremstillings side
