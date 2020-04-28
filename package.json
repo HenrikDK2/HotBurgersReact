@@ -1,0 +1,25 @@
+{
+  "name": "HotBurgersReact",
+  "version": "1.0.0",
+  "description": "HotBurgers er en fast-food hjemmeside, frems til din egen burger.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "parcel src/index.html",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HenrikDK2/HotBurgersReact.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HenrikDK2/HotBurgersReact/issues"
+  },
+  "homepage": "https://github.com/HenrikDK2/HotBurgersReact#readme",
+  "dependencies": {
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  }
+}
