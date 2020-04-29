@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "parcel src/index.html",
-    "build": "(npm run del) & (parcel build src/index.html --public-url ./)",
+    "build": "(npm run del) & (parcel build src/index.html --public-url ./) & (gulp build)",
     "del": "del-cli --force ./dist .cache .parcel-cache",
     "reset": "(del-cli --force ./dist .cache .parcel-cache ./node_modules) & npm i",
     "resetDev": "(del-cli --force ./dist .cache .parcel-cache ./node_modules) & (npm i) & npm run dev"
