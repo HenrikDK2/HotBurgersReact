@@ -1,17 +1,22 @@
 import React from "react";
 import { Global, css } from "@emotion/core";
+import { useTheme } from "emotion-theming";
 
-const globalStyle = css`
-  * {
-    user-select: none;
-  }
+const GlobalStyle = () => {
+  const theme = useTheme();
+  const globalStyle = css`
+    * {
+      user-select: none;
+    }
 
-  body {
-    margin: 0;
-    padding: 0;
-  }
-`;
+    body {
+      margin: 0;
+      padding: 0;
+      background: ${theme.colors.primary};
+    }
+  `;
 
-const GlobalStyle = () => <Global styles={globalStyle} />;
+  return <Global styles={globalStyle} />;
+};
 
 export default GlobalStyle;

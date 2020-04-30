@@ -14,7 +14,7 @@ const linkItem = (props) => {
     text-transform: capitalize;
     font-weight: 300;
     font-style: normal;
-    color: ${theme.colors.text};
+    color: ${theme.colors.bgText};
   `;
 
   const itemStyle = css`

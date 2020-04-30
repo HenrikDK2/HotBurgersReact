@@ -9,8 +9,11 @@ const fullscreenBG = (props) => {
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
+    position: relative;
+
+    ${props.className}
   `;
-  return <div className={backgroundStyle}></div>;
+  return <div className={backgroundStyle}>{props.children}</div>;
 };
 
 export default fullscreenBG;
