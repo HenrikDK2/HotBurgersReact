@@ -6,6 +6,7 @@ const figureStyle = css`
   width: 14rem;
   position: absolute;
   left: 235px;
+  z-index: 2;
   top: 40px;
 `;
 

@@ -4,6 +4,7 @@ import { ThemeProvider } from "emotion-theming";
 import { defaultTheme } from "./Theme";
 import { BrowserRouter, Route } from "react-router-dom";
 import Index from "./components/Pages/Index";
+import CreateBurger from "./components/Pages/CreateBurger";
 
 //Render
 import Header from "./components/organisms/Header";
@@ -22,7 +23,9 @@ const App = () => {
         <Route exact path="/">
           <Index />
         </Route>
-        <Route exact path="/Menu"></Route>
+        <Route exact path="/CreateBurger">
+          <CreateBurger />
+        </Route>
         <Route exact path="/Gallery"></Route>
         <Route exact path="/Testiminials"></Route>
         <Route exact path="/Contact Us"></Route>
