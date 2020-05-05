@@ -5,6 +5,7 @@ const fullscreenBG = (props) => {
   const backgroundStyle = css`
     background: url(${props.src});
     height: 100vh;
+    box-sizing: border-box;
     width: 100vw;
     background-position: center center;
     background-repeat: no-repeat;
@@ -13,7 +14,7 @@ const fullscreenBG = (props) => {
 
     ${props.className}
   `;
-  return <div className={backgroundStyle}>{props.children}</div>;
+  return <section className={backgroundStyle}>{props.children}</section>;
 };
 
 export default fullscreenBG;

@@ -12,7 +12,7 @@ const ImageContainer = (props) => {
   `;
 
   return (
-    <figure className={container}>
+    <figure className={container} onClick={props.onClick}>
       <Img src={props.src} alt={props.alt} />
     </figure>
   );

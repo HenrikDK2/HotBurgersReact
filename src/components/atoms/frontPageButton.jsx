@@ -10,7 +10,6 @@ const Button = (props) => {
     background: ${theme.colors.primary};
     font-size: 1.688rem;
     border: none;
-    padding: 20px 20px 20px 40px;
     box-sizing: border-box;
     border-radius: 90px;
     box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.38);
@@ -30,6 +29,8 @@ const Button = (props) => {
 
     & > a {
       text-decoration: none;
+      padding: 20px 20px 20px 40px;
+
       color: ${theme.colors["alt-red"]};
     }
 

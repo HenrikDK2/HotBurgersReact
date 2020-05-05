@@ -23,7 +23,8 @@
   "homepage": "https://github.com/HenrikDK2/HotBurgersReact#readme",
   "dependencies": {
     "react": "^16.13.1",
-    "react-dom": "^16.13.1"
+    "react-dom": "^16.13.1",
+    "react-intersection-observer": "^8.26.2"
   },
   "devDependencies": {
     "react-router-dom": "^5.1.2",

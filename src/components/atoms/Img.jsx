@@ -7,7 +7,14 @@ const Img = (props) => {
     height: auto;
     ${props.className}
   `;
-  return <img src={props.src} className={imgStyle} alt={props.alt} />;
+  return (
+    <img
+      src={props.src}
+      onDragStart={(e) => e.preventDefault()}
+      className={imgStyle}
+      alt={props.alt}
+    />
+  );
 };
 
 export default Img;
