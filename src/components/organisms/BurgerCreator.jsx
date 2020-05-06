@@ -1,18 +1,36 @@
-import React, { useState } from "react";
+import React, { useEffect, useContext } from "react";
 import { css } from "emotion";
 import { useTheme } from "emotion-theming";
 import addSvg from "../../images/add.svg";
 import removeSvg from "../../images/remove.svg";
-import arrow from "../../images/arrow.svg";
 import topBun from "../../images/topBun.png";
 import bottomBun from "../../images/bottomBun.png";
-import beefPatty from "../../images/beefPatty.png";
 import List from "../atoms/List";
 import ImageContainer from "../molecules/ImageContainer";
+import Foedevarer from "../molecules/Foedevarer";
+import {
+  burgerDataContext,
+  burgerContext,
+  priceContext,
+} from "../../contexts/burgerContext";
 
 const BurgerCreator = (props) => {
-  const [price, setPrice] = useState(3);
+  const [burger, setBurger] = useContext(burgerContext);
+  const [burgerData, setBurgerData] = useContext(burgerDataContext);
+  const [price, setPrice] = useContext(priceContext);
   const theme = useTheme();
+
+  useEffect(() => {
+    let basePrice = 2;
+    let price = basePrice;
+
+    burger.forEach((e) => {
+      price += e.price;
+    });
+
+    setPrice(price.toFixed(2));
+  });
+
   const figureStyle = css`
     width: 100px;
     margin: 0 20px;
@@ -27,7 +45,8 @@ const BurgerCreator = (props) => {
   `;
 
   const burgerDelContainer = css`
-    width: 575px;
+    max-width: 500px;
+    width: 50vw;
     margin: -5px 0;
     height: auto;
   `;
@@ -38,46 +57,32 @@ const BurgerCreator = (props) => {
     font-size: 1.688rem;
     color: ${theme.colors["alt-red"]};
   `;
-  const arrowRight = css`
-    padding: 0;
-    margin: 0;
-    width: 60px;
-    top: 50%;
-    right: -100px;
-    position: absolute;
-    transform: translateY(-50%);
-    cursor: pointer;
-  `;
-
-  const arrowLeft = css`
-    padding: 0;
-    margin: 0;
-    transform: translateY(-50%) rotate(180deg);
-    position: absolute;
-    cursor: pointer;
-    top: 50%;
-    left: -100px;
-    width: 60px;
-  `;
 
   const burgerCreator = css`
     justify-content: center;
   `;
 
-  const itemStyle = css`
-    position: relative;
+  const burgerFoedevareList = css`
+    flex-direction: column;
   `;
+
   return (
     <>
       <div className={imgDiv}>
         <ImageContainer
           className={figureStyle}
           src={addSvg}
+          onClick={() => setBurger(burger.concat([burgerData[0]]))}
           alt="add more to your burger!"
         />
         <ImageContainer
           className={figureStyle}
           src={removeSvg}
+          onClick={() => {
+            let currentBurger = Array.from(burger);
+            currentBurger.pop();
+            setBurger(currentBurger);
+          }}
           alt="add more to your burger!"
         />
       </div>
@@ -90,24 +95,17 @@ const BurgerCreator = (props) => {
             alt="Burger bun"
           />
 
-          <List>
-            <li className={itemStyle}>
-              <ImageContainer
-                className={arrowLeft}
-                src={arrow}
-                alt="skift fødevare"
-              />
-              <ImageContainer
-                className={burgerDelContainer}
-                src={beefPatty}
-                alt="Beef patty"
-              />
-              <ImageContainer
-                className={arrowRight}
-                src={arrow}
-                alt="skift fødevare"
-              />
-            </li>
+          <List className={burgerFoedevareList}>
+            {burger.map((e, index) => {
+              return (
+                <Foedevarer
+                  src={e.src}
+                  index={index}
+                  alt={e.alt}
+                  key={e.title + index}
+                />
+              );
+            })}
           </List>
           <ImageContainer
             className={burgerDelContainer}
