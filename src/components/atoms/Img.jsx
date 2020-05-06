@@ -5,6 +5,7 @@ const Img = (props) => {
   const imgStyle = css`
     width: 100%;
     height: auto;
+    object-fit: cover;
     ${props.className}
   `;
   return (

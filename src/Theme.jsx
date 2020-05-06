@@ -4,6 +4,7 @@ const defaultTheme = {
     "alt-red": "#A80E0E",
     "bg-nav": "rgba(40, 25, 35, 0.30)",
     text: "#000",
+    invertText: "#fff",
     bgText: "#fff",
   },
 };
