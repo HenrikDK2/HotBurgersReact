@@ -15,6 +15,7 @@ const linkItem = (props) => {
     font-weight: 300;
     font-style: normal;
     color: ${theme.colors.bgText};
+    ${props.className}
   `;
 
   const itemStyle = css`

@@ -8,6 +8,7 @@ import CreateBurger from "./components/Pages/CreateBurger";
 import beefPatty from "./images/beefPatty.png";
 import cheese from "./images/cheese2.png";
 import lettuce from "./images/lettuce2.png";
+import Footer from "./components/organisms/Footer";
 
 //Render
 import Header from "./components/organisms/Header";
@@ -66,6 +67,7 @@ const App = () => {
         <Route exact path="/Gallery"></Route>
         <Route exact path="/Testiminials"></Route>
         <Route exact path="/Contact Us"></Route>
+        <Footer />
       </ThemeProvider>
     </BrowserRouter>
   );
