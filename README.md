@@ -10,5 +10,3 @@ HotBurgers er en fast-food hjemmeside, frems til din egen burger.
 - Du skal lave din egen burger, med hjælp af billeder hvor du kan tilføj flere lag af fødevarer. 
 - Swipe eller klik på pil for at skifte mellem salat, ost, kød f.eks. 
 - Prisen ændre sig med fødevarende. 
-
-## Netlify: https://gracious-kalam-3430d6.netlify.app/
