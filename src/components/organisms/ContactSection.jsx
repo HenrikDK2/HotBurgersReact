@@ -11,52 +11,52 @@ import twitter from "../../images/twitter.svg";
 import map from "../../images/map.jpg";
 import instagram from "../../images/instagram.svg";
 
-const ContactSection = (props) => {
+const articleStyle = css`
+  display: flex;
+  justify-content: center;
+  flex: 1;
+  flex-direction: column;
+`;
+
+const buttonStyle = css`
+  justify-self: left;
+`;
+const h2Style = css`
+  font-size: 2.5rem;
+  margin: 25px 0 0 0;
+`;
+
+const iconContainer = css`
+  display: flex;
+`;
+
+const iconsStyle = css`
+  width: 57px;
+  margin: 25px 20px 0 0;
+`;
+
+const mapStyle = css`
+  width: 100%;
+  display: flex;
+  height: 100%;
+`;
+
+const asideStyle = css`
+  flex: 1;
+`;
+
+const divStyle = css`
+  margin: 0 auto;
+  padding: 50px;
+`;
+
+const ContactSection = () => {
   const theme = useTheme();
   const contactSection = css`
     background-color: ${theme.colors["alt-red"]};
     display: flex;
     justify-content: space-between;
     max-height: 636px;
-  `;
-
-  const articleStyle = css`
-    display: flex;
-    justify-content: center;
-    flex: 1;
-    flex-direction: column;
-  `;
-
-  const buttonStyle = css`
-    justify-self: left;
-  `;
-  const h2Style = css`
-    font-size: 2.5rem;
-    margin: 25px 0 0 0;
-  `;
-
-  const iconContainer = css`
-    display: flex;
-  `;
-
-  const iconsStyle = css`
-    width: 57px;
-    margin: 25px 20px 0 0;
-  `;
-
-  const mapStyle = css`
-    width: 100%;
-    display: flex;
-    height: 100%;
-  `;
-
-  const asideStyle = css`
-    flex: 1;
-  `;
-
-  const divStyle = css`
-    margin: 0 auto;
-    padding: 50px;
   `;
 
   return (

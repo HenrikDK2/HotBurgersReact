@@ -9,15 +9,18 @@ import LogoSrc from "./../../images/logo.svg";
 import SearchIcon from "./../../images/search.svg";
 import AccountIcon from "./../../images/account.svg";
 import CheckoutIcon from "./../../images/checkout.svg";
+const headerStyle = css`
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 10;
+`;
+const itemStyle = css`
+  margin: 0 50px;
+`;
 
 const Header = () => {
   const theme = useTheme();
-  const headerStyle = css`
-    position: absolute;
-    top: 0;
-    right: 0;
-    z-index: 10;
-  `;
 
   const navStyle = css`
     width: 1093px;
@@ -36,10 +39,6 @@ const Header = () => {
     justify-content: center;
     list-style: none;
     background-color: ${theme.colors["alt-red"]};
-  `;
-
-  const itemStyle = css`
-    margin: 0 50px;
   `;
 
   return (

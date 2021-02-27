@@ -8,23 +8,23 @@ import bgSrc from "./../../images/topBackgroundIndex.jpg";
 import H2 from "../atoms/H2";
 import scrollDown from "../../images/scrollDown.svg";
 import ImageContainer from "../molecules/ImageContainer";
+const fade = keyframes`
+to{
+  will-change: opacity;
+  opacity: 0;
+  transform: translate(-50%, 20px);
+}
+`;
+const divStyle = css`
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  top: 345px;
+  left: 172px;
+`;
 
 const IndexFullBgSection = (props) => {
   const theme = useTheme();
-  const fade = keyframes`
-  to{
-    will-change: opacity;
-    opacity: 0;
-    transform: translate(-50%, 20px);
-  }
-`;
-  const divStyle = css`
-    position: absolute;
-    margin: 0;
-    padding: 0;
-    top: 345px;
-    left: 172px;
-  `;
 
   const h4Style = css`
     font-size: 1.875rem;
@@ -70,9 +70,7 @@ const IndexFullBgSection = (props) => {
       <div className={divStyle}>
         <H2>Party Time!</H2>
         <div className={divBgStyle}>
-          <h4 className={h4Style}>
-            Create your burger and get 1.5L Pepsi Free
-          </h4>
+          <h4 className={h4Style}>Create your burger and get 1.5L Pepsi Free</h4>
         </div>
         <Button value="Create Now" href="/createBurger" />
       </div>

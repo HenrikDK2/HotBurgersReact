@@ -8,15 +8,37 @@ import bottomBun from "../../images/bottomBun.png";
 import List from "../atoms/List";
 import ImageContainer from "../molecules/ImageContainer";
 import Foedevarer from "../molecules/Foedevarer";
-import {
-  burgerDataContext,
-  burgerContext,
-  priceContext,
-} from "../../contexts/burgerContext";
+import { burgerDataContext, burgerContext, priceContext } from "../../contexts/burgerContext";
+const figureStyle = css`
+  width: 100px;
+  margin: 0 20px;
+  cursor: pointer;
+  height: 100px;
+`;
+const imgDiv = css`
+  display: flex;
+  margin-bottom: 40px;
+  align-items: center;
+  justify-content: center;
+`;
 
-const BurgerCreator = (props) => {
+const burgerDelContainer = css`
+  max-width: 500px;
+  width: 50vw;
+  margin: -5px 0;
+  height: auto;
+`;
+
+const burgerCreator = css`
+  justify-content: center;
+`;
+
+const burgerFoedevareList = css`
+  flex-direction: column;
+`;
+const BurgerCreator = () => {
   const [burger, setBurger] = useContext(burgerContext);
-  const [burgerData, setBurgerData] = useContext(burgerDataContext);
+  const [burgerData] = useContext(burgerDataContext);
   const [price, setPrice] = useContext(priceContext);
   const theme = useTheme();
 
@@ -27,43 +49,14 @@ const BurgerCreator = (props) => {
     burger.forEach((e) => {
       price += e.price;
     });
-
     setPrice(price.toFixed(2));
   });
-
-  const figureStyle = css`
-    width: 100px;
-    margin: 0 20px;
-    cursor: pointer;
-    height: 100px;
-  `;
-  const imgDiv = css`
-    display: flex;
-    margin-bottom: 40px;
-    align-items: center;
-    justify-content: center;
-  `;
-
-  const burgerDelContainer = css`
-    max-width: 500px;
-    width: 50vw;
-    margin: -5px 0;
-    height: auto;
-  `;
 
   const h4Style = css`
     font-family: "Avengeance";
     text-align: center;
     font-size: 1.688rem;
     color: ${theme.colors["alt-red"]};
-  `;
-
-  const burgerCreator = css`
-    justify-content: center;
-  `;
-
-  const burgerFoedevareList = css`
-    flex-direction: column;
   `;
 
   return (
@@ -89,29 +82,14 @@ const BurgerCreator = (props) => {
 
       <List className={burgerCreator}>
         <li>
-          <ImageContainer
-            className={burgerDelContainer}
-            src={topBun}
-            alt="Burger bun"
-          />
+          <ImageContainer className={burgerDelContainer} src={topBun} alt="Burger bun" />
 
           <List className={burgerFoedevareList}>
             {burger.map((e, index) => {
-              return (
-                <Foedevarer
-                  src={e.src}
-                  index={index}
-                  alt={e.alt}
-                  key={e.title + index}
-                />
-              );
+              return <Foedevarer src={e.src} index={index} alt={e.alt} key={e.title + index} />;
             })}
           </List>
-          <ImageContainer
-            className={burgerDelContainer}
-            src={bottomBun}
-            alt="Burger bun"
-          />
+          <ImageContainer className={burgerDelContainer} src={bottomBun} alt="Burger bun" />
         </li>
       </List>
       <h4 className={h4Style}>{price}$ incl. Shipping.</h4>

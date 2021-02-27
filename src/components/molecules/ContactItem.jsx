@@ -4,20 +4,20 @@ import ImageContainer from "../molecules/ImageContainer";
 import Paragraph from "../atoms/Paragraph";
 import { useTheme } from "emotion-theming";
 
+const iconStyle = css`
+  width: 60px;
+`;
+
+const spanStyle = css`
+  display: block;
+`;
 const ContactItem = (props) => {
   const theme = useTheme();
-  const iconStyle = css`
-    width: 60px;
-  `;
 
   const pStyle = css`
     color: ${theme.colors.invertText};
     text-align: left;
     margin: 0 0 0 25px;
-  `;
-
-  const spanStyle = css`
-    display: block;
   `;
 
   const divStyle = css`

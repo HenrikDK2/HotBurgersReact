@@ -3,6 +3,12 @@ import { css } from "emotion";
 import { useTheme } from "emotion-theming";
 import { NavLink } from "react-router-dom";
 
+const itemStyle = css`
+  position: relative;
+
+  font-size: 1rem;
+`;
+
 const linkItem = (props) => {
   const theme = useTheme();
 
@@ -16,12 +22,6 @@ const linkItem = (props) => {
     font-style: normal;
     color: ${theme.colors.bgText};
     ${props.className}
-  `;
-
-  const itemStyle = css`
-    position: relative;
-
-    font-size: 1rem;
   `;
 
   const linkActive = css`
@@ -40,6 +40,7 @@ const linkItem = (props) => {
   return (
     <li className={itemStyle}>
       <NavLink
+        onDragStart={(e) => e.preventDefault()}
         activeClassName={linkActive}
         className={linkStyle}
         exact

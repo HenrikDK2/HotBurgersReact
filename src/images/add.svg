@@ -1,18 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="118" height="118" viewBox="0 0 118 118">
-  <defs>
-    <filter id="Ellipse_102" x="0" y="0" width="118" height="118" filterUnits="userSpaceOnUse">
-      <feOffset dy="3" input="SourceAlpha"/>
-      <feGaussianBlur stdDeviation="3" result="blur"/>
-      <feFlood flood-opacity="0.161"/>
-      <feComposite operator="in" in2="blur"/>
-      <feComposite in="SourceGraphic"/>
-    </filter>
-  </defs>
-  <g id="Component_1_1" data-name="Component 1 – 1" transform="translate(9 6)">
-    <g transform="matrix(1, 0, 0, 1, -9, -6)" filter="url(#Ellipse_102)">
-      <circle id="Ellipse_102-2" data-name="Ellipse 102" cx="50" cy="50" r="50" transform="translate(9 6)" fill="#00ff08"/>
-    </g>
-    <line id="Line_81" data-name="Line 81" y2="75" transform="translate(50.5 12.5)" fill="none" stroke="#707070" stroke-width="8"/>
-    <line id="Line_82" data-name="Line 82" x1="81" transform="translate(9.5 50.5)" fill="none" stroke="#707070" stroke-width="8"/>
-  </g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="118" height="118"><defs><filter id="a" x="0" y="0" width="118" height="118" filterUnits="userSpaceOnUse"><feOffset dy="3"/><feGaussianBlur stdDeviation="3" result="blur"/><feFlood flood-opacity=".161"/><feComposite operator="in" in2="blur"/><feComposite in="SourceGraphic"/></filter></defs><g data-name="Component 1 – 1"><g filter="url(#a)"><circle data-name="Ellipse 102" cx="50" cy="50" r="50" transform="translate(9 6)" fill="#00ff08"/></g><path data-name="Line 81" fill="none" stroke="#707070" stroke-width="8" d="M59.5 18.5v75"/><path data-name="Line 82" fill="none" stroke="#707070" stroke-width="8" d="M99.5 56.5h-81"/></g></svg>
