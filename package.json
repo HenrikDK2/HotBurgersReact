@@ -23,14 +23,14 @@
   "homepage": "https://github.com/HenrikDK2/HotBurgersReact#readme",
   "dependencies": {
     "react": "^16.13.1",
-    "react-dom": "^16.13.1"
-  },
-  "devDependencies": {
-    "@emotion/core": "^10.0.28",
-    "del-cli": "^3.0.1",
+    "react-dom": "^16.13.1",
+    "react-router-dom": "^5.1.2",
     "emotion": "^10.0.27",
     "emotion-theming": "^10.0.27",
-    "parcel-bundler": "^1.12.4",
-    "react-router-dom": "^5.1.2"
+    "@emotion/core": "^10.0.28"
+  },
+  "devDependencies": {
+    "del-cli": "^3.0.1",
+    "parcel-bundler": "^1.12.4"
   }
 }
