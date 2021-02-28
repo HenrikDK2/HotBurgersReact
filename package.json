@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "parcel src/index.html",
-    "build": "(parcel build src/index.html --public-url ./) & (gulp build)",
+    "build": "(parcel build src/index.html --public-url ./)",
     "del": "del-cli --force ./dist .cache .parcel-cache",
     "reset": "(del-cli --force ./dist .cache .parcel-cache ./node_modules) & npm i",
     "resetDev": "(del-cli --force ./dist .cache .parcel-cache ./node_modules) & (npm i) & npm run dev"
@@ -30,10 +30,6 @@
     "del-cli": "^3.0.1",
     "emotion": "^10.0.27",
     "emotion-theming": "^10.0.27",
-    "gulp": "^4.0.2",
-    "gulp-htmlmin": "^5.0.1",
-    "gulp-imagemin": "^7.1.0",
-    "gulp-uglify": "^3.0.2",
     "parcel-bundler": "^1.12.4",
     "react-router-dom": "^5.1.2"
   }

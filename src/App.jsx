@@ -15,12 +15,7 @@ import Header from "./components/organisms/Header";
 
 //Global
 import GlobalCss from "./GlobalCss";
-import Fonts from "./Fonts";
-import {
-  burgerDataContext,
-  burgerContext,
-  priceContext,
-} from "./contexts/burgerContext";
+import { burgerDataContext, burgerContext, priceContext } from "./contexts/burgerContext";
 
 const App = () => {
   const burgerData = useState([
@@ -50,7 +45,6 @@ const App = () => {
     <BrowserRouter>
       <ThemeProvider theme={defaultTheme}>
         <GlobalCss />
-        <Fonts />
         <Header />
         <Route exact path="/">
           <Index />

@@ -1,6 +1,7 @@
 import React from "react";
 import { Global, css, keyframes } from "@emotion/core";
 import { useTheme } from "emotion-theming";
+import Avengeance from "./fonts/Avengeance.ttf";
 
 const GlobalStyle = () => {
   const theme = useTheme();
@@ -14,6 +15,12 @@ const GlobalStyle = () => {
     * {
       user-select: none;
       box-sizing: border-box;
+    }
+    @font-face {
+      font-family: "Avengeance";
+      src: url(${Avengeance}) format("truetype");
+      font-weight: normal;
+      font-style: normal;
     }
 
     html {

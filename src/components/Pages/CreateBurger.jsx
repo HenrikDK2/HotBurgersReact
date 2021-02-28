@@ -9,10 +9,14 @@ const mainStyle = css`
 const btn = css`
   margin: 0 auto 50px;
 `;
+
+const section = css`
+  min-height: 1000px;
+`;
 const CreateBurger = (props) => {
   return (
     <main className={mainStyle}>
-      <section>
+      <section className={section}>
         <BurgerCreator />
         <Button value="Order now" href="/createBurger/order" className={btn} />
       </section>
